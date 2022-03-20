@@ -13,5 +13,5 @@ def get_item(item):
             }
         }
     except ValueError:
-        answer = {"none": "null"}
+        answer = {"error": "the record can't be retrieved"}
     return answer

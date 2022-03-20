@@ -1,5 +1,5 @@
 from flask import redirect, Blueprint, request
-from services import post_items
+from services import post_items,get_last_id,get_item
 
 post_item_blue = Blueprint("post_item", __name__)
 
@@ -11,4 +11,6 @@ def post_item():
     sell_in = data["sell_in"]
     quality = data["quality"]
     post_items.post_item(name, int(sell_in), int(quality))
-    return redirect("/")
+    last_id = str(get_last_id.get_last_id())
+    answer = get_item(last_id)
+    return answer
