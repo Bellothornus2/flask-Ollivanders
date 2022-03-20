@@ -12,7 +12,6 @@ def delete_item_func(item_id):
     sell_in = data["sell_in"]
     quality = data["quality"] """
     data = get_item.get_item(item_id)
-    if "error" in data:
-        return data
-    delete_item.delete_item(item_id)
+    if "error" not in data:
+        delete_item.delete_item(item_id)
     return data
