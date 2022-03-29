@@ -1,10 +1,10 @@
 from flask import redirect, Blueprint, request
 from services import post_items,get_last_id,get_item
 
-post_item_blue = Blueprint("post_item", __name__)
+post_item_blueprint = Blueprint("post_item", __name__)
 
 
-@post_item_blue.route("/item", methods=["POST"])
+@post_item_blueprint.route("/item", methods=["POST"])
 def post_item():
     data = request.get_json()
     name = data["name"]

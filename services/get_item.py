@@ -6,10 +6,11 @@ def get_item(item):
     try:
         item_db = manager.get(id=item)
         answer = {
-            item_db.id: {
-                "name": item_db.name,
-                "quality": item_db.quality,
-                "sell_in": item_db.sell_in,
+            "data":{
+                "id":item_db.id,
+                "name":item_db.name,
+                "quality":item_db.quality,
+                "sell_in":item_db.sell_in,
             }
         }
     except ValueError:

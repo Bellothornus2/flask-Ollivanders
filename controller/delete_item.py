@@ -2,10 +2,10 @@ from webbrowser import get
 from flask import Blueprint, request, redirect
 from services import delete_item,get_item
 
-delete_item_blue = Blueprint("delete_item", __name__)
+delete_item_blueprint = Blueprint("delete_item", __name__)
 
 
-@delete_item_blue.route("/item/<item_id>", methods=["DELETE"])
+@delete_item_blueprint.route("/item/<item_id>", methods=["DELETE"])
 def delete_item_func(item_id):
     """ data = request.get_json()
     name = data["name"]

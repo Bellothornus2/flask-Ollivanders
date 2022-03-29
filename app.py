@@ -13,12 +13,12 @@ from controller import (
 
 
 app = Flask(__name__)
-app.register_blueprint(get_item.get_item_blue)
+app.register_blueprint(get_item.get_item_blueprint)
 app.register_blueprint(get_all.get_all_blue)
-app.register_blueprint(post_item.post_item_blue)
-app.register_blueprint(delete_item.delete_item_blue)
+app.register_blueprint(post_item.post_item_blueprint)
+app.register_blueprint(delete_item.delete_item_blueprint)
 app.register_blueprint(initialize_db.initialize_items_blue)
-app.register_blueprint(update_item.update_item_blue)
+app.register_blueprint(update_item.update_item_blueprint)
 app.register_blueprint(update_daily.update_daily_blue)
 CORS(app)
 try:
