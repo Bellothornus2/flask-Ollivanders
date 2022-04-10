@@ -9,4 +9,3 @@ update_daily_blue = Blueprint("update_daily", __name__)
 def update_daily():
     items = get_all_service()
     update_daily_service(items)
-    return redirect("/")

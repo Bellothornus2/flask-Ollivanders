@@ -9,7 +9,7 @@ def test_put_item():
     get_all_items = test.get("/")
     dict_items = get_all_items.get_json()
     for item in dict_items.items():
-        if item[1]["name"] == "hola":
+        if item["name"] == "hola":
             test.put(
                 "/item",
                 json={
