@@ -12,5 +12,5 @@ def post_item():
     quality = data["quality"]
     post_items.post_item(name, int(sell_in), int(quality))
     last_id = str(get_last_id.get_last_id())
-    answer = get_item(last_id)
+    answer = get_item.get_item(last_id)
     return answer
